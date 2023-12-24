@@ -22,13 +22,13 @@ public class Program {
 		System.out.println("Tax: ");
 		employee.tax = scanner.nextDouble();
 		
-		employee.showResult();
+		System.out.println("Employee: " + employee);
 		
 		System.out.println("What percentage to increase the salary? ");
 		double taxIncrease = scanner.nextDouble();
 		employee.increaseSalary(taxIncrease);
 		
-		System.out.println("Updated Data: " + employee.name + " , " + employee.increaseSalary(taxIncrease));
+		System.out.println("Updated Data: " + employee);
 		
 		
 		scanner.close();

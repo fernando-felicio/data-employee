@@ -6,16 +6,17 @@ public class Employee {
 	public double grossSalary;
 	public double tax;
 	
-	public double netSalary(double salaryCalc) {
+	public double netSalary() {
 		return this.grossSalary - this.tax;
 	}
-	
-	public void showResult() {
-		System.out.println("Employee: " + name + " $ " + netSalary(grossSalary));
-	}
-	
-	public double increaseSalary(double salaryCalcPlus) {
-		return netSalary(salaryCalcPlus) + ((this.grossSalary / 100) *salaryCalcPlus);
+		
+	public double increaseSalary(double percentage) {
+		return grossSalary += grossSalary * percentage / 100.0;
 	}
 
+	public String toString() {
+		return name 
+				+", $ "
+				+ String.format("%.2f", netSalary());
+	}
 }
